@@ -1,0 +1,14 @@
+name: First Workflow
+
+on:
+  push
+  
+jobs:
+  BUILD-JOB:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code
+        uses: actions/checkout@v2
+        
+      - name: Docker Build
+        run: docker build ./frontend -t project/frontend
