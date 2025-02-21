@@ -23,6 +23,7 @@ jobs:
       - name: Docker Build
         run: |
           echo "==============Robot Name: $ROBOT_NAME=============="
+          npm hello
           docker build ./frontend -t project/frontend
           echo "==============Robot Name: $ROBOT_NAME=============="
       
